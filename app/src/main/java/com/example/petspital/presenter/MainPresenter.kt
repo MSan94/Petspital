@@ -20,7 +20,9 @@ class MainPresenter : MainContract.Presenter {
             val hospList = HospListData.getHospListData() // Model에서 HospList를 전달 받는다
             mainView?.showHospList(hospList) //Model에서 전달받은 데이터를 View에게 전달한다.
             mainView?.hindLoading() //네트워크 통신이 끝났으니 View에 프로그레스바를 숨기도록 요청
-        },1000)
+            mainView?.showView()
+        },2000)
+
     }
 
     override fun dropView() {

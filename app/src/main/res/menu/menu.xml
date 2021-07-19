@@ -5,11 +5,11 @@
         android:icon="@drawable/ic_hosp"/>
     <item android:id="@+id/item_Board"
         android:title="자유게시판"
-        android:icon="@drawable/ic_hosp"/>
+        android:icon="@drawable/ic_board"/>
     <item android:id="@+id/item_Tip"
         android:title="팁"
-        android:icon="@drawable/ic_hosp"/>
+        android:icon="@drawable/ic_tip"/>
     <item android:id="@+id/item_My"
         android:title="My"
-        android:icon="@drawable/ic_hosp"/>
+        android:icon="@drawable/ic_my"/>
 </menu>
