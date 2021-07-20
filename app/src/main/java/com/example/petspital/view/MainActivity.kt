@@ -1,17 +1,15 @@
 package com.example.petspital.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.petspital.R
 import com.example.petspital.base.BaseActivity
 import com.example.petspital.databinding.ActivityMainBinding
-import com.example.petspital.model.hosp.Hosp
 import com.example.petspital.presenter.MainContract
 import com.example.petspital.presenter.MainPresenter
+import com.example.petspital.util.room.entity.Hosp
 import com.example.petspital.view.fragment.hosp.HospListFragment
 
 class MainActivity : BaseActivity(), MainContract.View {

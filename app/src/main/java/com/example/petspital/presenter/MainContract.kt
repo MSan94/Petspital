@@ -2,7 +2,7 @@ package com.example.petspital.presenter
 
 import com.example.petspital.base.BasePresenter
 import com.example.petspital.base.BaseView
-import com.example.petspital.model.hosp.Hosp
+import com.example.petspital.util.room.entity.Hosp
 
 interface MainContract {
     interface  View : BaseView{

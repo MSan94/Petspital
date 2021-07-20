@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.petspital.databinding.FragmentHosplistBinding
-import com.example.petspital.model.hosp.Hosp
 import com.example.petspital.presenter.MainContract
+import com.example.petspital.util.room.entity.Hosp
+
 // http://data.ulsan.go.kr/rest/ulsananimal/getUlsananimalList?ServiceKey=aAYj%2B%2FxzbnIufpdEs6pPdTu7H0Tbve6sEljLAwKe5T4JufmD2S5Rom7CezaN4qeI9GTWGkH7mL%2FpjiFj9Bb5aA%3D%3D&numOfRows=10
 class HospListFragment : Fragment(), MainContract.View {
 
