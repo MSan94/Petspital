@@ -20,10 +20,13 @@ import java.net.URLDecoder
 
 class HospPresenter : BaseContract.PresenterHosp {
 
+    private lateinit var hospDao: HospDao
+
     override fun getHospApi() {
     }
 
     override fun initRoomHosp(hospDao: HospDao) {
+        this.hospDao = hospDao
     }
 
     override fun insertRoomHosp() {
