@@ -39,11 +39,9 @@ class MainActivity : BaseActivity(), MainContract.View {
 
 
     override fun showLoading() {
-        binding.progressLoading.visibility = View.VISIBLE
     }
 
     override fun hindLoading() {
-        binding.progressLoading.visibility = View.GONE
     }
 
 

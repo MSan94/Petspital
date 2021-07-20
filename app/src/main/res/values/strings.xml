@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Petspital</string>
+    <string name="loading">로딩중...</string>
 </resources>

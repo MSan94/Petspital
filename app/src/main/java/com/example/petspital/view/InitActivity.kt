@@ -1,6 +1,10 @@
 package com.example.petspital.view
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import androidx.core.content.ContextCompat
 import com.example.petspital.base.BaseActivity
 import com.example.petspital.databinding.ActivityInitBinding
 import com.example.petspital.databinding.ActivityMainBinding
@@ -20,7 +24,9 @@ class InitActivity : BaseActivity(), InitContract.View {
         setContentView(view)
 
         initPresenter.takeView(this)
+
         initPresenter.getHospApi()
+//        moveActivity()
 
     }
 
@@ -28,6 +34,22 @@ class InitActivity : BaseActivity(), InitContract.View {
         initPresenter = InitPresenter()
     }
 
+    override fun showLoading() {
+        binding.progressLoading.visibility = View.VISIBLE
+        binding.textviewLoading.visibility = View.VISIBLE
+    }
+
+    override fun hideLoading() {
+        binding.progressLoading.visibility = View.GONE
+        binding.textviewLoading.visibility = View.GONE
+    }
+
+    override fun moveActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
     override fun showError(error: String) {
     }
+
 }

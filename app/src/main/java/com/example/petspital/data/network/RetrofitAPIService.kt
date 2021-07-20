@@ -11,7 +11,9 @@ interface RetrofitAPIService {
     @GET("/rest/ulsananimal/getUlsananimalList")
     fun getHops(
         @Query("ServiceKey") ServiceKey: String,
-        @Query("numOfRows") numOfRows : String = "80"
-    ): Call<ResponseBody>
+        @Query("numOfRows") numOfRows : String = "80",
+//        @Query("pageNo") pageNo : String
+    ): Call<XmlResponse>
+
 
 }
