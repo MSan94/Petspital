@@ -58,14 +58,14 @@
                 android:textStyle="bold"
                 android:textSize="12dp"
                 android:textColor="@color/black"
-                android:text="@string/hosp_date"
+                android:text="@string/hosp_tel"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <TextView
                 android:textStyle="bold"
                 android:textSize="12dp"
                 android:textColor="@color/black"
-                android:id="@+id/textView_HospAppDate"
+                android:id="@+id/textView_HostTel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2" />

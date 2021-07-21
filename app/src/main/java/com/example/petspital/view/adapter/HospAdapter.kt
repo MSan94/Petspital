@@ -15,7 +15,7 @@ class HospAdapter : ListAdapter<Item, HospAdapter.ViewHolder>(diffUtil){
         fun bind(item: Item) {
             binding.textViewHospTitle.text = item.title
             binding.textViewHospAddress.text = item.address
-            binding.textViewHospAppDate.text = item.appDate
+            binding.textViewHostTel.text = item.tel
         }
     }
 
