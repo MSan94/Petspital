@@ -5,7 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ProgressBar
+        android:id="@+id/progress_Loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textview_Loading"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_Loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <LinearLayout
+        android:id="@+id/linearLayout_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -13,7 +37,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:weightSum="10">
+        android:weightSum="10"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/textView_HospList_Title"
@@ -24,6 +49,7 @@
             tools:text="병원리스트" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/HosprecyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="9.5" />

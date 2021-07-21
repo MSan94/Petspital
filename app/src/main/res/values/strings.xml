@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Petspital</string>
-    <string name="loading">로딩중...</string>
+    <string name="loading">병원정보를 가져오는 중입니다...</string>
+    <string name="hosp_title">병원명:</string>
+    <string name="hosp_address">주소:</string>
+    <string name="hosp_date">개설:</string>
 </resources>

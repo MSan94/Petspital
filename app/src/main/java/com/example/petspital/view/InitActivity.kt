@@ -11,7 +11,6 @@ import com.example.petspital.databinding.ActivityMainBinding
 import com.example.petspital.presenter.InitContract
 import com.example.petspital.presenter.InitPresenter
 import com.example.petspital.presenter.MainPresenter
-import com.example.petspital.util.room.init.AppDatabase
 
 class InitActivity : BaseActivity(), InitContract.View {
 
@@ -25,25 +24,15 @@ class InitActivity : BaseActivity(), InitContract.View {
         setContentView(view)
 
         initPresenter.takeView(this)
+        moveActivity()
 
-        initPresenter.getHospApi()
-
-        AppDatabase.getInstance(this)?.let { initPresenter.initRoomHosp(it.hospDao()) }
+//        AppDatabase.getInstance(this)?.let { initPresenter.initRoomHosp(it.hospDao()) }
     }
 
     override fun initPresenter() {
         initPresenter = InitPresenter()
     }
 
-    override fun showLoading() {
-        binding.progressLoading.visibility = View.VISIBLE
-        binding.textviewLoading.visibility = View.VISIBLE
-    }
-
-    override fun hideLoading() {
-        binding.progressLoading.visibility = View.GONE
-        binding.textviewLoading.visibility = View.GONE
-    }
 
     override fun moveActivity() {
         val intent = Intent(this, MainActivity::class.java)

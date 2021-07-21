@@ -2,7 +2,8 @@ package com.example.petspital.presenter
 
 import com.example.petspital.base.BasePresenter
 import com.example.petspital.base.BaseView
-import com.example.petspital.util.room.dao.HospDao
+import com.example.petspital.data.network.Item
+import com.example.petspital.model.hosp.Hosp
 
 interface BaseContract {
     interface HospView : BaseView{
@@ -17,7 +18,7 @@ interface BaseContract {
 
     interface PresenterHosp : BasePresenter<HospView>{
         fun getHospApi()
-        fun initRoomHosp(hospDao : HospDao)
         fun insertRoomHosp()
+        fun showHospList() : List<Item>
     }
 }

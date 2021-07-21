@@ -9,7 +9,6 @@ import com.example.petspital.base.BaseActivity
 import com.example.petspital.databinding.ActivityMainBinding
 import com.example.petspital.presenter.MainContract
 import com.example.petspital.presenter.MainPresenter
-import com.example.petspital.util.room.entity.Hosp
 import com.example.petspital.view.fragment.hosp.HospListFragment
 
 class MainActivity : BaseActivity(), MainContract.View {
@@ -26,8 +25,8 @@ class MainActivity : BaseActivity(), MainContract.View {
 
         mainPresenter.takeView(this) // MainContract.View를 상속받는 Activity가 생성이 되었다는 것을 Presenter에 알려준다.
         mainPresenter.getHospList()
-        showLoading()
         initBottomNavigation()
+        transFragment(hospListFragment)
 
     }
 
@@ -36,16 +35,8 @@ class MainActivity : BaseActivity(), MainContract.View {
 
 
 
-    override fun showLoading() {
-    }
-
-    override fun hindLoading() {
-    }
-
-
-
-    override fun showHospList(hospList: List<Hosp>) {
-    }
+//    override fun showHospList(hospList: List<Hosp>) {
+//    }
 
 
 
