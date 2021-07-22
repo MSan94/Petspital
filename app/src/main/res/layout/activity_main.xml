@@ -18,9 +18,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:text="@string/app_name"
+            android:fontFamily="@font/nanumsquare"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="@color/custom_yellow"
             android:id="@+id/textView_contentTitle"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +44,7 @@
             android:id="@+id/bottomNavigation_Menu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/custom_basic"
+            android:background="@color/custom_yellow"
             app:itemIconTint="@drawable/menu_selector_color"
             app:itemRippleColor="@null"
             app:itemTextColor="@drawable/menu_selector_color"
