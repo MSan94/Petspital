@@ -9,6 +9,7 @@ import com.example.petspital.base.BaseActivity
 import com.example.petspital.databinding.ActivityMainBinding
 import com.example.petspital.presenter.MainContract
 import com.example.petspital.presenter.MainPresenter
+import com.example.petspital.view.fragment.board.BoardFragment
 import com.example.petspital.view.fragment.hosp.HospListFragment
 
 class MainActivity : BaseActivity(), MainContract.View {
@@ -16,6 +17,7 @@ class MainActivity : BaseActivity(), MainContract.View {
     private lateinit var binding : ActivityMainBinding
     private lateinit var mainPresenter : MainPresenter // MainActivity와 1:1 대응하는 MainPresenter를 연결시켜주기 위한 초기화 지연 변수
     private val hospListFragment by lazy { HospListFragment() }
+    private val boardFragment by lazy { BoardFragment() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,7 @@ class MainActivity : BaseActivity(), MainContract.View {
         mainPresenter.getHospList()
         initBottomNavigation()
         transFragment(hospListFragment)
+
 
     }
 
@@ -73,6 +76,7 @@ class MainActivity : BaseActivity(), MainContract.View {
             setOnNavigationItemSelectedListener {
                 when(it.itemId){
                     R.id.item_Hosp -> transFragment(hospListFragment)
+                    R.id.item_Board -> transFragment(boardFragment)
                 }
                 true
             }

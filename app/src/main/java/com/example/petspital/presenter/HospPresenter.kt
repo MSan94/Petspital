@@ -20,10 +20,10 @@ import java.net.URLDecoder
 class HospPresenter : BaseContract.PresenterHosp {
 
 //    private lateinit var hospDao: HospDao
-    private lateinit var list: List<Item>
+    private lateinit var list : List<Item>
     private var mainView: BaseContract.HospView? = null
-
     override fun getHospApi(){
+
         /**
          * 동물병원 정보 추출
          */
@@ -36,15 +36,20 @@ class HospPresenter : BaseContract.PresenterHosp {
         retrofitService.getHops(URLDecoder.decode(Param.SERVICEKEY), Param.NUMOFROWS,)
             .enqueue(object : Callback<XmlResponse> {
                 override fun onResponse(call: Call<XmlResponse>, response: Response<XmlResponse>) {
+                    Log.d("TestRes", "성공")
                     /** Data 가공 **/
                     val res: XmlResponse? = response.body()
                     val body: Body? = res?.body
                     val items: List<Items>? = body?.data
                     list = items?.get(0)?.item!!
+                    Log.d("ListTest", "${list.size}")
                 }
                 override fun onFailure(call: Call<XmlResponse>, t: Throwable) {
+                    Log.d("TestRes", "실패 ${t.toString()}")
                 }
             })
+
+//        Log.d("list", "${list.size}")
     }
 
     override fun insertRoomHosp() {

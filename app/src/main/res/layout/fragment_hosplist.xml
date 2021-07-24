@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <ProgressBar
         android:id="@+id/progress_Loading"
@@ -56,10 +56,14 @@
             android:weightSum="10">
 
             <Spinner
+
+                android:id="@+id/spinnerGugun"
                 android:layout_weight="3.5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                />
             <EditText
+                android:id="@+id/editText_Keyword"
                 android:hint="@string/searchHint"
                 android:fontFamily="@font/nanumsquare"
                 android:layout_weight="2.5"
