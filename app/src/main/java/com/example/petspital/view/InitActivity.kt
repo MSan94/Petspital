@@ -2,15 +2,10 @@ package com.example.petspital.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.core.content.ContextCompat
 import com.example.petspital.base.BaseActivity
 import com.example.petspital.databinding.ActivityInitBinding
-import com.example.petspital.databinding.ActivityMainBinding
 import com.example.petspital.presenter.InitContract
 import com.example.petspital.presenter.InitPresenter
-import com.example.petspital.presenter.MainPresenter
 
 class InitActivity : BaseActivity(), InitContract.View {
 
@@ -36,6 +31,7 @@ class InitActivity : BaseActivity(), InitContract.View {
 
     override fun moveActivity() {
         val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
     }
 

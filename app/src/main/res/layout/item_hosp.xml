@@ -95,6 +95,7 @@
                     android:textSize="12dp"
                     android:textStyle="bold" />
                 <ImageView
+                    android:id="@+id/imageView_Calling"
                     android:src="@drawable/ic_phone"
                     android:layout_weight="8"
                     android:layout_width="match_parent"
