@@ -21,4 +21,8 @@ interface BaseContract {
         fun insertRoomHosp()
         fun showHospList() : List<Item>
     }
+
+    interface PresenterBoard : BasePresenter<BoardView>{
+        
+    }
 }

@@ -9,7 +9,10 @@
 
 
     <string name="fragment1Title">병원 리스트</string>
+    <string name="fragment2Title">자유게시판</string>
 
+
+    <string name="loginGuest">게스트</string>
 
 
     <string-array name="spinner_gugun">

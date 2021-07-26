@@ -2,6 +2,8 @@ package com.example.petspital.view
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.widget.AppCompatButton
+import com.example.petspital.R
 import com.example.petspital.base.BaseActivity
 import com.example.petspital.databinding.ActivityInitBinding
 import com.example.petspital.presenter.InitContract
@@ -19,7 +21,9 @@ class InitActivity : BaseActivity(), InitContract.View {
         setContentView(view)
 
         initPresenter.takeView(this)
-        moveActivity()
+
+        binding.btnGuestLogin.setOnClickListener { clickBtnEvent(binding.btnGuestLogin) }
+
 
 //        AppDatabase.getInstance(this)?.let { initPresenter.initRoomHosp(it.hospDao()) }
     }
@@ -35,7 +39,18 @@ class InitActivity : BaseActivity(), InitContract.View {
         startActivity(intent)
     }
 
-    override fun showError(error: String) {
+    override fun clickBtnEvent(btnId : AppCompatButton) {
+        when(btnId){
+            binding.btnGuestLogin -> {
+                moveActivity()
+            }
+        }
     }
+
+    override fun showError(error: String) {
+
+    }
+
+
 
 }
